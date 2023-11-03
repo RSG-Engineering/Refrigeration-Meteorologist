@@ -1,4 +1,5 @@
 import xlsxwriter
+import os
 from datetime import datetime
 from meteostat import Monthly, Stations
 
@@ -11,7 +12,7 @@ def get_average_temp():
     states =['AL','AK','AS','AZ','AR','CA','CO','CT','DE','DC','FL','GA','GU','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','MP','OH','OK','OR','PA','PR','RI','SC','SD','TN','TX','UM','UT','VT','VI','VA','WA','WV','WI','WY',]
     start = datetime(2000, 1, 1)
     end = datetime(2022, 12, 31)
-    destination_path = 'C:\\Users\\rwhitehorn.REFSG\\Desktop\\State_Climates.xlsx'
+    destination_path = os.getcwd()+'\\State_Climates.xlsx'
 
     ##################################################################
     ############## spreadsheet formatting section ####################
